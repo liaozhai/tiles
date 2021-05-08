@@ -1,0 +1,20 @@
+{
+  "name": "tiles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liaozhai/tiles.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liaozhai/tiles/issues"
+  },
+  "homepage": "https://github.com/liaozhai/tiles#readme",
+  "devDependencies": {
+    "leaflet": "^1.7.1"
+  }
+}
