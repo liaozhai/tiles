@@ -17,7 +17,7 @@ export default L.GridLayer.extend({
         const {z, x, y} = coords;
         const key = tileKey(z, x, y);
         const {layerId} = this.options;
-        const request = new Worker('tile.js');        
+        const request = new Worker(this.options.workerPath || 'tile.js');
         request.onmessage = e => {
             request.terminate();
             const {status} = e.data;
