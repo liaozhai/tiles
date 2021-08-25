@@ -1,8 +1,8 @@
-import get from './request.js';
+import request from './request.js';
 
 onmessage = function(e) {    
     const {layerId, z, x, y} = e.data;    
-    get(layerId, z, x, y)
+    request(layerId, z, x, y)
     .then(result => {    
         const layers = result && Object.entries(result);
         if (layers.length > 0) {

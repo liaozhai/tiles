@@ -1,8 +1,8 @@
 import {VectorTile} from '@mapbox/vector-tile';
 import Protobuf from 'pbf';
 
-export default function (layerId, z, x, y) {        
-    return fetch(`tile/${layerId}/${z}/${x}/${y}`)
+export default function (layerId, z, x, y) {
+    return fetch(`/tile/${layerId}/${z}/${x}/${y}`)
         .then(response => response.ok && response || Promise.reject(response))
         .then(response => response.blob())
         .then(blob => blob.arrayBuffer())
