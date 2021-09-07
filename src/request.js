@@ -14,9 +14,9 @@ export default function (layerId, z, x, y) {
                 result[id] = [];
                 for (let i = 0; i < vt.length; ++i) {
                     const f = vt.feature(i);
-                    const {type, properties: {feature_serial}} = f;                        
+                    const {type, properties} = f;                        
                     const coordinates = f.loadGeometry();
-                    result[id].push({type, coordinates, feature_id: feature_serial});
+                    result[id].push({type, coordinates, ..properties});
                 }
             }
             return result;            
