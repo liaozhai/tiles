@@ -17,6 +17,7 @@ export default L.GridLayer.extend({
         const {z, x, y} = coords;
         const key = tileKey(z, x, y);
         const {layerId} = this.options;
+	L.DomEvent.on(tile, 'click', () => this.fire('click', {layerId, z, x, y}), this);
         const request = new Worker(this.options.workerPath || 'tile.js');
         request.onmessage = e => {
             request.terminate();
